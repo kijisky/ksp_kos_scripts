@@ -4,7 +4,7 @@ PRINT "Scrpt rocket1".
 PRINT "== Scripts loading".
 
 switch to 0.
-COPYPATH( "0:/orbit3.ksm", "1:/" ). 
+COPYPATH( "0:/orbit3.ks", "1:/" ). 
 
 PRINT " .... 20 secs for start ".
 wait 10.
@@ -21,7 +21,7 @@ wait 1.
 PRINT " .... 1 ".
 wait 1.
 
-RUNPATH("orbit3.ksm").
+RUNPATH("orbit3.ks").
 
 when AG1 then {
 	PRINT "Run starting sequence".

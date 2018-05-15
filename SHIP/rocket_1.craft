@@ -2762,7 +2762,7 @@ PART
 	{
 		name = kOSProcessor
 		isEnabled = True
-		bootFile = /boot/rocket1.ksm
+		bootFile = /boot/rocket1.ks
 		diskSpace = 60000
 		baseDiskSpace = 60000
 		baseModuleMass = 0
