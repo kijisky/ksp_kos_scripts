@@ -1,3 +1,13 @@
+function deployPayload{
+	DECLARE PARAMETER pCpuTagName.
+	set pCpu to ship:partstagged(pCpuTagName).
+	set mCpu to pCpu[0]:getmodule("kOSProcessor").	
+	
+	set mCpu:bootfilename to "init_sat.ks".
+	mCpu:activate().
+}
+
+
 set FLIGHT_PLAN to list(
 	list("alt",     0,  100,   0),
 	list("alt",  3000,  200,   5),
@@ -97,6 +107,8 @@ LOCK THROTTLE TO 0.
 
 
 PRINT "== Deploy Payload".
+
+deployPayload("command").
 RCS ON.
 STAGE.
 SET SHIP:CONTROL:FORE to -1.
