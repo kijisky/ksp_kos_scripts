@@ -27,7 +27,7 @@ SET tgt_speed to 100.
 
 
 set start_longitude to ship:longitude.
-set entryburn_longitude to ship:longitude - 19.
+set entryburn_longitude to ship:longitude - 18.5.
 
 
 
@@ -104,6 +104,7 @@ PRINT "== Orbiting. ".
 PRINT "==  launch is over      ====================== ".
 SET tgt_speed to 0.
 LOCK THROTTLE TO 0.
+unlock THROTTLE.
 
 
 PRINT "== Deploy Payload".
