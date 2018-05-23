@@ -124,8 +124,14 @@ function calculateOrbitEntryNode {
 		set N2:PROGRADE to N2:PROGRADE-1.
 	}
 	print "... accurate finding".
-	until ( abs(N2:orbit:APOAPSIS -  N2:orbit:PERIAPSIS) < 1000 ) {
+	/// Find minimum possible APO-PERI diff.
+	set diffApoPer to abs(N2:orbit:APOAPSIS -  N2:orbit:PERIAPSIS).
+	set prevDiff to diffApoPer.
+	until ( diffApoPer > prevDiff ) {
 		set N2:PROGRADE to N2:PROGRADE-0.05.
+		
+		set prevDiff to diffApoPer.
+		set diffApoPer to abs(N2:orbit:APOAPSIS -  N2:orbit:PERIAPSIS).
 	}
 	return N2.
 }
