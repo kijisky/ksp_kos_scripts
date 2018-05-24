@@ -5,6 +5,8 @@ PRINT "== Scripts loading".
 
 switch to 0.
 COPYPATH( "0:/orbit3.ks", "1:/" ). 
+COPYPATH( "0:/orbit_start.ks", "1:/" ). 
+COPYPATH( "0:/orbit_land.ks", "1:/" ). 
 
 PRINT " .... 20 secs for start ".
 wait 10.
